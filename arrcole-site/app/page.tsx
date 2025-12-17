@@ -25,6 +25,7 @@ export default function Home() {
         </CardGrid>
 
       </div>
+      <p className="text-center text-neutral-400">2025</p>
     </main>
   );
 }

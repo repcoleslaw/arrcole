@@ -13,10 +13,22 @@ type LocationPin = {
 
 const locations: LocationPin[] = [
   {
-    id: "la",
+    id: "london",
     type: "home",
-    name: "Los Angeles",
-    coordinates: [-118.2437, 34.0522],
+    name: "London",
+    coordinates: [0.1276, 51.5072],
+  },
+  {
+    id: "rome",
+    type: "home",
+    name: "Rome",
+    coordinates: [12.4822, 41.8967],
+  },
+  {
+    id: "toronto",
+    type: "home",
+    name: "Toronto",
+    coordinates: [-79.3832, 43.7],
   },
   {
     id: "sf",
@@ -29,6 +41,24 @@ const locations: LocationPin[] = [
     type: "project",
     name: "New York",
     coordinates: [-74.006, 40.7128],
+  },
+  {
+    id: "hi",
+    type: "project",
+    name: "Honolulu",
+    coordinates: [-157.8581, 21.3099],
+  },
+  {
+    id: "malta",
+    type: "project",
+    name: "Malta",
+    coordinates: [14.3754, 35.9375],
+  },
+  {
+    id: "malta",
+    type: "project",
+    name: "Malta",
+    coordinates: [14.3754, 35.9375],
   },
 ];
 
