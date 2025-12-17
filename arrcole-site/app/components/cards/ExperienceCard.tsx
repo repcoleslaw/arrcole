@@ -13,7 +13,7 @@ export function ExperienceCard() {
   return (
     <Card title="Experience">
       {/* Scroll container */}
-      <div className="relative max-h-36 overflow-y-auto pr-2 pl-8">
+      <div className="relative max-h-36 overflow-y-auto pr-2 pl-2">
         <ul className="space-y-4">
           {items.map((item, index) => (
             <li key={`${item.year}-${index}`} className="flex items-start gap-4">          
