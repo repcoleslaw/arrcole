@@ -1,10 +1,94 @@
+"use client"
+
+import mapboxgl from "mapbox-gl";
+import { useEffect, useRef } from "react";
 import { Card } from "../Card";
 
+type LocationPin = {
+  id: string;
+  type: "project" | "home";
+  name: string;
+  coordinates: [number, number]; // [lng, lat]
+};
+
+const locations: LocationPin[] = [
+  {
+    id: "la",
+    type: "home",
+    name: "Los Angeles",
+    coordinates: [-118.2437, 34.0522],
+  },
+  {
+    id: "sf",
+    type: "project",
+    name: "San Francisco",
+    coordinates: [-122.4194, 37.7749],
+  },
+  {
+    id: "ny",
+    type: "project",
+    name: "New York",
+    coordinates: [-74.006, 40.7128],
+  },
+];
+
+
+
+
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!;
+
 export function LocationCard() {
+  const mapRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!mapRef.current) return;
+
+    const map = new mapboxgl.Map({
+      container: mapRef.current,
+      style: "mapbox://styles/mapbox/light-v11", // greyscale base
+      center: [-98, 39], // US-centered
+      zoom: 1,
+      interactive: true, // feels more “dashboard”
+    });
+
+    locations.forEach((location) => {
+      const el = document.createElement("div");
+
+      el.className = `
+        h-2 w-2 rounded-full
+        ${location.type === "project" ? "bg-blue-500" : "bg-red-500"}
+      `;
+
+      new mapboxgl.Marker({ element: el })
+        .setLngLat(location.coordinates)
+        .setPopup(
+          new mapboxgl.Popup({ offset: 12 }).setText(location.name)
+        )
+        .addTo(map);
+    });
+
+    return () => map.remove();
+  }, []);
+
   return (
-    <Card title="Map">
-      <div className="h-32 w-full rounded-lg bg-neutral-200 flex items-center justify-center text-sm text-neutral-500">
-        Los Angeles
+    <Card title="Locations">
+      <div className="relative h-full">
+        <div
+          ref={mapRef}
+          className="h-full w-full overflow-hidden rounded-lg"
+        />
+
+        {/* Legend */}
+        <div className="absolute bottom-3 left-3 rounded-lg bg-white/90 px-3 py-2 text-xs shadow">
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-blue-500" />
+            Projects
+          </div>
+          <div className="mt-1 flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-red-500" />
+            Lived
+          </div>
+        </div>
       </div>
     </Card>
   );

@@ -3,10 +3,10 @@
 
 import { CardGrid } from "./components/CardGrid";
 import { CallCard } from "./components/cards/CallCard";
+import { EnjoyingCard } from "./components/cards/EnjoyingCard";
 import { ExperienceCard } from "./components/cards/ExperienceCard";
 import { LocationCard } from "./components/cards/LocationCard";
-import { MusicCard } from "./components/cards/MusicCard";
-import { ReadingCard } from "./components/cards/ReadingCard";
+import { WorkingCard } from "./components/cards/WorkingOn";
 import { Hero } from "./components/Hero";
 
 export default function Home() {
@@ -16,10 +16,12 @@ export default function Home() {
         <Hero />
         <CardGrid>
           <ExperienceCard/>
-          <MusicCard/>
-          <ReadingCard/>
+          <EnjoyingCard/>
+          <WorkingCard/>
           <LocationCard/>
-          <CallCard/>
+          <div className="sm:col-span-2 lg:col-span-2">
+            <CallCard />
+          </div>
         </CardGrid>
 
       </div>
