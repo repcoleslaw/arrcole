@@ -33,32 +33,38 @@ const locations: LocationPin[] = [
   {
     id: "sf",
     type: "project",
-    name: "San Francisco",
+    name: "Curios",
     coordinates: [-122.4194, 37.7749],
   },
   {
     id: "ny",
     type: "project",
-    name: "New York",
+    name: "MSG",
     coordinates: [-74.006, 40.7128],
   },
   {
     id: "hi",
     type: "project",
-    name: "Honolulu",
+    name: "Kapio'lani Womens & Childrens Hospital",
     coordinates: [-157.8581, 21.3099],
   },
   {
     id: "malta",
     type: "project",
-    name: "Malta",
+    name: "St Luke Hospital & Gozo General",
     coordinates: [14.3754, 35.9375],
   },
   {
-    id: "malta",
+    id: "calgary",
     type: "project",
-    name: "Malta",
-    coordinates: [14.3754, 35.9375],
+    name: "Calgary Cancer Project",
+    coordinates: [-114.07, 51.04],
+  },
+  {
+    id: "niagara",
+    type: "project",
+    name: "Niagara Health",
+    coordinates: [-79.08, 43.08],
   },
 ];
 
