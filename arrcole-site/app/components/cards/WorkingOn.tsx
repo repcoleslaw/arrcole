@@ -14,7 +14,7 @@ export function WorkingCard() {
   return (
     <Card title="What I’m working on">
  {/* Scroll container */}
-      <div className="relative max-h-36 overflow-y-auto pr-2 pl-2">
+      <div className="relative max-h-46 overflow-y-auto pr-2 pl-2">
         <ul className="space-y-4">
           {items.map((item, index) => (
             <li key={`${item.year}-${index}`} className="flex items-start gap-4">          
