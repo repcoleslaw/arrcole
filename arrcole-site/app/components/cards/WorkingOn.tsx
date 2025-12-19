@@ -2,10 +2,10 @@ import { Card } from "../Card";
 
 export function WorkingCard() {
   const items = [
-    { year: "2024", status:"dev", label: "My Digital Twin App" },
+    { year: "2024", status:"dev", label: "My Contractor App" },
     { year: "2024", status:"writing", label: "AI Readiness" },
     { year: "2024", status:"writing", label: "Digital Practice Operations" },
-    { year: "2024", status:"dev", label: "LookingForGroup App" },
+    { year: "2024", status:"dev", label: "Indie Game Project" },
     { year: "2024", status:"dev", label: "Fitness Leaderboard" },
 
     
