@@ -12,7 +12,7 @@ export function Hero() {
         </h1>
 
         <p className="label mt-4 max-w-xl text-neutral-600 dark:text-neutral-400">
-          I am a trained architect with 10 years of experience
+          I am a trained architect with 15 years of experience
           specializing in crafting creative tools, solutions, and empowering
           the AEC industry.
         </p>
