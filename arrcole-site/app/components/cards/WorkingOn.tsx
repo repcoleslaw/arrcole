@@ -20,7 +20,7 @@ export function WorkingCard() {
             <li key={`${item.year}-${index}`} className="flex items-start gap-4">          
               {/* Content */}
               <div className="flex gap-3">
-                <span className="w-12 text-xs text-neutral-400">
+                <span className="w-12 text-xs text-neutral-400 dark:text-neutral-500">
                   {item.status}
                 </span>
                 <span className="text-sm">{item.label}</span>
