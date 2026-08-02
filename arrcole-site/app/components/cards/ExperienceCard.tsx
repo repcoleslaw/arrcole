@@ -20,7 +20,7 @@ export function ExperienceCard() {
             <li key={`${item.year}-${index}`} className="flex items-start gap-4">          
               {/* Content */}
               <div className="flex gap-2 ">
-                <span className="w-12 text-sm text-neutral-400">
+                <span className="w-12 text-sm text-neutral-400 dark:text-neutral-500">
                   {item.year}
                 </span>
                 <div className="flex flex-col">

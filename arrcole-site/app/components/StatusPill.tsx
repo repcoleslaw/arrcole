@@ -9,7 +9,7 @@ export function StatusPill() {
   return (
     <button
       onClick={() => setRevealed(true)}
-      className="flex items-center gap-2 rounded-full border bg-white px-4 py-2 text-sm shadow-sm transition hover:bg-neutral-50"
+      className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800"
     >
       <span
         className={`h-2 w-2 rounded-full ${
